@@ -34,7 +34,7 @@ def Decode():
         FileOpen = askopenfilename(initialdir ="/Desktop",title="Select the File",filetypes=(("only jpeg files","*jpg"),("all type of files","*.*")))
         
     def Decoder():
-        Message=stg.reveal(FileOpen)
+        Message=stg.reveal(FileOpen) 
         def decode(image):    
             arr = np.array(image)
             red = arr[..., 0]  # All Red values
@@ -153,7 +153,7 @@ def Decode():
             return data
         label3 = Label(text=Message)
         label3.place(relx=0.3,rely=0.3)
-        
+       
     SelectButton = Button(text="Select the file",command=OpenFile)
     SelectButton.place(relx=0.1,rely=0.4)
     EncodeButton=Button(text="Decode",command=Decoder)
